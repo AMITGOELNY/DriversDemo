@@ -1,0 +1,81 @@
+[versions]
+
+minSdk = "24"
+targetSdk = "33"
+compileSdk = "33"
+
+# gradle
+gradleVersion = "8.1.0-rc01"
+
+# kotlin
+kotlinVersion = "1.8.21"
+coroutinesVersion = "1.7.2"
+
+composeCompilerVersion = "1.4.7"
+coreKtx = "1.10.1"
+koinVersion = "3.4.2"
+lifecycleRuntimeKtx = "2.6.1"
+room = "2.5.2"
+
+[libraries]
+
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+coroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutinesVersion" }
+lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+
+# compose
+compose-bom = { module = "androidx.compose:compose-bom", version = "2023.06.01" }
+animation-compose = { module = "androidx.compose.animation:animation" }
+icons-compose = { module = "androidx.compose.material:material-icons-extended" }
+material-compose = { module = "androidx.compose.material:material" }
+runtime-compose = { module = "androidx.compose.runtime:runtime" }
+runtime-livedata-compose = { module = "androidx.compose.runtime:runtime-livedata" }
+tooling-compose = { module = "androidx.compose.ui:ui-tooling" }
+
+accompanist-placeholder = { module = "com.google.accompanist:accompanist-placeholder-material", version = "0.31.5-beta" }
+
+# compose - androidX
+activity-compose = { module = "androidx.activity:activity-compose", version = "1.7.2" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version = "2.6.0" }
+viewModel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.6.1" }
+
+koin-android = { module = "io.insert-koin:koin-android", version = "3.4.2" }
+koin-compose = { module = "io.insert-koin:koin-androidx-compose", version = "3.4.5" }
+koin-core = { module = "io.insert-koin:koin-core", version = "3.4.2" }
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.5.1" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version = "4.10.0" }
+okhttp-logging = { module = "com.squareup.okhttp3:logging-interceptor", version = "4.10.0" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version = "2.9.0" }
+retrofit-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version = "1.0.0" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+
+# test
+#coroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesVersion" }
+#junit = { module = "junit:junit", version = "4.13.2" }
+#koinTest = { module = "io.insert-koin:koin-test", version.ref = "koinVersion" }
+#kotest = { module = "io.kotest:kotest-assertions-core", version = "5.6.2" }
+#mockk = { module = "io.mockk:mockk", version = "1.13.5" }
+#turbine = { module = "app.cash.turbine:turbine", version = "0.13.0" }
+#uiTestCompose = { module = "androidx.compose.ui:ui-test-junit4" }
+
+[bundles]
+
+composeUI = [
+    "activity-compose",
+    "animation-compose",
+    "icons-compose",
+    "material-compose",
+    "navigation-compose",
+    "runtime-compose",
+    "runtime-livedata-compose",
+    "tooling-compose",
+    "viewModel-compose",
+]
+
+koin = [
+    "koin-android",
+    "koin-compose",
+    "koin-core"
+]

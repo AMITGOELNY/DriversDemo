@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RiderApp</string>
+    <string name="driver_info">Driver Info</string>
+    <string name="retry">Retry</string>
+    <string name="error_occurred_getting_driver_data">An Error occurred getting driver data</string>
+    <string name="error_occurred_syncing_the_data">An Error occurred syncing the data</string>
+    <string name="route_info">Route Info</string>
+    <string name="no_routes_available">No Routes Available.</string>
+    <string name="error_occurred_fetching_the_route_info">An error occurred fetching the route info</string>
 </resources>
