@@ -60,7 +60,6 @@ dependencies {
         implementation(bundles.composeUI)
         implementation(core.ktx)
         implementation(lifecycle.runtime.ktx)
-        implementation(accompanist.placeholder)
 
         implementation(bundles.koin)
         implementation(kotlinx.serialization)
